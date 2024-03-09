@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+class LandingPage extends StatefulWidget {
+  const LandingPage({super.key});
+
+  @override
+  State<LandingPage> createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
+  @override
+  Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            margin: EdgeInsets.fromLTRB(97, 240, 97, 52),
+            child: Image(
+              image: AssetImage("assets/insta_logo.png"),
+              height: 49,
+              width: 182,
+            ),
+          ),
+          Column(
+            children: [
+              CircleAvatar(
+                radius: 42.5,
+                backgroundImage: AssetImage("assets/ram.jpg"),
+              ),
+              Center(
+                child: Text(
+                  "jacob_w",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+                height: 44,
+                child: Text(
+                  "Log in",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
