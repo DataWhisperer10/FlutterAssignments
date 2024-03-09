@@ -10,6 +10,10 @@ class SplashScreen extends StatefulWidget {
 class _MyWidgetState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text("Welcome"),
+      ),
+    );
   }
 }
